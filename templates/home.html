@@ -5,7 +5,7 @@
 	</title>
 </HEAD>
 <style>
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 .login-page {
   width: 360px;
@@ -95,28 +95,51 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
+.strongText {
+  font-weight: bold;
+}
+#navbar {
+  background-color: #4a8f24;
+  color: white;
+  font-size: 22px;
+  padding: 5px;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
 body {
   background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
-  font-family: "Roboto", sans-serif;
+  background: -webkit-linear-gradient(right, #151719, black);
+  background: -moz-linear-gradient(right, #151719, black);
+  background: -o-linear-gradient(right, #151719, black);
+  background: linear-gradient(to left, #151719, black);
+  font-family: "Inter",sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;      
 }
 
 
 Resources1×0.5×0.25×Rerun
 </style>
 <body>
-	
+  <nav id="navbar">
+    <h1>ADD NOTES IN THE FORM OF QR CODE</h1>
+  </nav>
+
 
 	<div class="login-page">
 		<div class="form">
 		  <form class="login-form" method="POST" enctype = "multipart/form-data" action="/">
-			<input type="text" placeholder="Data" name="data"/>
-			<input type="file" accept="video/mp4" name="video">
+      <label for="addNotes">
+        <p class="strongText">Write Notes below:</p>
+        <input id="addNotes" type="text" placeholder="Add Notes here" name="data"/>
+      </label>
+      <label for="addVideo">
+        <p class="strongText">Attach the video:</p>
+        <input id="addVideo" type="file" accept="video/mp4" name="video">
+      </label>
+			
 			<button>Submit</button>
 	
 		  </form>
